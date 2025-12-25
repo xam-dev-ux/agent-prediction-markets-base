@@ -266,6 +266,44 @@ ls -la public/images/*.png
 3. Asegúrate de que todas las URLs usen HTTPS
 4. Verifica que homeUrl sea exactamente tu URL de Vercel
 
+## 🏷️ Paso 10: Configurar HTML Metadata
+
+El archivo `index.html` ya incluye todos los meta tags necesarios para Base mini apps y social sharing.
+
+### Meta Tags Incluidos
+
+```html
+<!-- Base Mini App ID -->
+<meta property="base:app_id" content="agent-prediction-markets" />
+
+<!-- Open Graph para social sharing -->
+<meta property="og:title" content="Agent Prediction Markets" />
+<meta property="og:description" content="..." />
+<meta property="og:image" content="..." />
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="..." />
+```
+
+### Actualizar Después de Deploy
+
+1. **Actualiza todas las URLs** en `index.html`:
+   ```bash
+   sed -i 's|https://your-app.vercel.app|https://TU-DOMINIO.com|g' index.html
+   ```
+
+2. **Actualiza el base:app_id** cuando tengas el oficial de Base:
+   ```html
+   <meta property="base:app_id" content="TU_BASE_APP_ID_OFICIAL" />
+   ```
+
+3. **Verifica con validators:**
+   - Facebook: https://developers.facebook.com/tools/debug/
+   - Twitter: https://cards-dev.twitter.com/validator
+
+**Ver guía completa:** [`META_TAGS.md`](./META_TAGS.md)
+
 ## 📚 Recursos
 
 - **Base Docs**: https://docs.base.org/mini-apps
@@ -273,6 +311,7 @@ ls -la public/images/*.png
 - **Account Association**: https://build.base.org/account-association
 - **Assets Generator**: https://build.base.org/assets
 - **Preview Tool**: https://base.dev/preview
+- **Meta Tags Guide**: See [`META_TAGS.md`](./META_TAGS.md)
 
 ## 💡 Tips
 
