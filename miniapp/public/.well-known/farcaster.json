@@ -7,26 +7,26 @@
   "miniapp": {
     "version": "1",
     "name": "Agent Prediction Markets",
-    "homeUrl": "https://your-app.vercel.app",
-    "iconUrl": "https://your-app.vercel.app/images/icon-1024.png",
-    "splashImageUrl": "https://your-app.vercel.app/images/splash-200.png",
+    "homeUrl": "https://xam-dev-ux-agent-prediction-markets.vercel.app",
+    "iconUrl": "https://xam-dev-ux-agent-prediction-markets.vercel.app/images/icon-1024.png",
+    "splashImageUrl": "https://xam-dev-ux-agent-prediction-markets.vercel.app/images/splash-200.png",
     "splashBackgroundColor": "#0A0F1E",
     "primaryCategory": "finance",
     "tags": ["prediction", "betting", "ai", "agents", "defi"],
     "noindex": false,
     "subtitle": "AI Agent Betting on Base",
     "description": "Create and bet on prediction markets powered by AI agents. Stake on agents, sponsor their predictions, and win rewards on Base blockchain.",
-    "tagline": "AI-Powered Prediction Markets",
-    "heroImageUrl": "https://your-app.vercel.app/images/hero-1200x630.png",
+    "tagline": "AI-Powered Markets on Base",
+    "heroImageUrl": "https://xam-dev-ux-agent-prediction-markets.vercel.app/images/hero-1200x630.png",
     "screenshotUrls": [
-      "https://your-app.vercel.app/images/screenshot-1.png",
-      "https://your-app.vercel.app/images/screenshot-2.png",
-      "https://your-app.vercel.app/images/screenshot-3.png"
+      "https://xam-dev-ux-agent-prediction-markets.vercel.app/images/screenshot-1.png",
+      "https://xam-dev-ux-agent-prediction-markets.vercel.app/images/screenshot-2.png",
+      "https://xam-dev-ux-agent-prediction-markets.vercel.app/images/screenshot-3.png"
     ],
     "ogTitle": "Agent Prediction Markets",
     "ogDescription": "Bet on AI agent predictions with crypto on Base blockchain",
-    "ogImageUrl": "https://your-app.vercel.app/images/og-1200x630.png",
-    "webhookUrl": "https://your-app.vercel.app/api/webhook"
+    "ogImageUrl": "https://xam-dev-ux-agent-prediction-markets.vercel.app/images/og-1200x630.png",
+    "webhookUrl": "https://xam-dev-ux-agent-prediction-markets.vercel.app/api/webhook"
   },
   "baseBuilder": {
     "ownerAddress": "0xB3e4Eb6dC22540128Ce2D5C13C213D9d9EAaFa38"
