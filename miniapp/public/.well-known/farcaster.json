@@ -1,15 +1,15 @@
 {
   "accountAssociation": {
-    "header": "eyJmaWQiOjU4MDczOCwidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweDEwOUM5ZTgwMTNFY2U4ODZENGY4QUUyNjkyNTRkZTkzMEFFZmNkNDQifQ",
-    "payload": "eyJkb21haW4iOiJ4YW0tZGV2LXV4LWFnZW50LXByZWRpY3Rpb24tbWFya2V0cy52ZXJjZWwuYXBwIn0",
-    "signature": "xG7K5TAIxy3VTJldOLU70t6iJlVnk6kabj42zEOszGAvkOnc182YlvsD2awiPzMeYRCrSOWVO1bs6banpRGR7hs="
+    "header": "",
+    "payload": "",
+    "signature": "="
   },
   "miniapp": {
     "version": "1",
     "name": "Agent Prediction Markets",
-    "homeUrl": "https://xam-dev-ux-agent-prediction-markets.vercel.app",
-    "iconUrl": "https://xam-dev-ux-agent-prediction-markets.vercel.app/images/icon-1024.png",
-    "splashImageUrl": "https://xam-dev-ux-agent-prediction-markets.vercel.app/images/splash-200.png",
+    "homeUrl": "https://agent-prediction-markets-base.vercel.app",
+    "iconUrl": "https://agent-prediction-markets-base.vercel.app/images/icon-1024.png",
+    "splashImageUrl": "https://agent-prediction-markets-base.vercel.app/images/splash-200.png",
     "splashBackgroundColor": "#0A0F1E",
     "primaryCategory": "finance",
     "tags": ["prediction", "betting", "ai", "agents", "defi"],
@@ -17,16 +17,16 @@
     "subtitle": "AI Agent Betting on Base",
     "description": "Create and bet on prediction markets powered by AI agents. Stake on agents, sponsor their predictions, and win rewards on Base blockchain.",
     "tagline": "AI-Powered Markets on Base",
-    "heroImageUrl": "https://xam-dev-ux-agent-prediction-markets.vercel.app/images/hero-1200x630.png",
+    "heroImageUrl": "https://agent-prediction-markets-base.vercel.app/images/hero-1200x630.png",
     "screenshotUrls": [
-      "https://xam-dev-ux-agent-prediction-markets.vercel.app/images/screenshot-1.png",
-      "https://xam-dev-ux-agent-prediction-markets.vercel.app/images/screenshot-2.png",
-      "https://xam-dev-ux-agent-prediction-markets.vercel.app/images/screenshot-3.png"
+      "https://agent-prediction-markets-base.vercel.app/images/screenshot-1.png",
+      "https://agent-prediction-markets-base.vercel.app/images/screenshot-2.png",
+      "https://agent-prediction-markets-base.vercel.app/images/screenshot-3.png"
     ],
     "ogTitle": "Agent Prediction Markets",
     "ogDescription": "Bet on AI agent predictions with crypto on Base blockchain",
-    "ogImageUrl": "https://xam-dev-ux-agent-prediction-markets.vercel.app/images/og-1200x630.png",
-    "webhookUrl": "https://xam-dev-ux-agent-prediction-markets.vercel.app/api/webhook"
+    "ogImageUrl": "https://agent-prediction-markets-base.vercel.app/images/og-1200x630.png",
+    "webhookUrl": "https://agent-prediction-markets-base.vercel.app/api/webhook"
   },
   "baseBuilder": {
     "ownerAddress": "0xB3e4Eb6dC22540128Ce2D5C13C213D9d9EAaFa38"

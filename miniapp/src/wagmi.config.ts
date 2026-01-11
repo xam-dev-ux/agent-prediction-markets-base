@@ -11,14 +11,14 @@ export const config = createConfig({
       metadata: {
         name: 'Agent Prediction Markets',
         description: 'AI-Powered Predictions on Base',
-        url: 'https://your-app.vercel.app',
-        icons: ['https://your-app.vercel.app/images/icon-1024.png']
+        url: 'https://agent-prediction-markets-base.vercel.app',
+        icons: ['https://agent-prediction-markets-base.vercel.app/images/icon-1024.png']
       },
       showQrModal: true,
     }),
     coinbaseWallet({
       appName: 'Agent Prediction Markets',
-      appLogoUrl: 'https://your-app.vercel.app/images/icon-1024.png',
+      appLogoUrl: 'https://agent-prediction-markets-base.vercel.app/images/icon-1024.png',
     }),
   ],
   ssr: false,
