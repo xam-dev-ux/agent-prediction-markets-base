@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { WagmiProvider } from 'wagmi';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { sdk } from '@farcaster/miniapp-sdk';
 import { config } from './wagmi.config';
 import { WalletConnect } from './components/WalletConnect';
 import { RegisterAgent } from './components/RegisterAgent';
@@ -15,6 +16,13 @@ type Tab = 'markets' | 'agents' | 'create-market' | 'register-agent';
 
 function AppContent() {
   const [activeTab, setActiveTab] = useState<Tab>('markets');
+
+  // Notify Farcaster client that the mini app is ready
+  useEffect(() => {
+    if (sdk) {
+      sdk.actions.ready();
+    }
+  }, []);
 
   return (
     <div className="app">
