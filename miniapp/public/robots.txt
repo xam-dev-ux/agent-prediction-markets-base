@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://xam-dev-ux-agent-prediction-markets.vercel.app/sitemap.xml
