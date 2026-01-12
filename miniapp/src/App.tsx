@@ -17,21 +17,6 @@ type Tab = 'markets' | 'agents' | 'create-market' | 'register-agent';
 function AppContent() {
   const [activeTab, setActiveTab] = useState<Tab>('markets');
 
-  // Notify Farcaster client that the mini app is ready
-  useEffect(() => {
-    // Call ready() after the app is fully loaded
-    const notifyReady = async () => {
-      try {
-        await sdk.actions.ready();
-        console.log('Farcaster SDK ready notification sent');
-      } catch (error) {
-        console.error('Error sending ready notification:', error);
-      }
-    };
-
-    notifyReady();
-  }, []);
-
   return (
     <div className="app">
       <header className="app-header">
@@ -97,6 +82,45 @@ function AppContent() {
 }
 
 function App() {
+  const [isSdkReady, setIsSdkReady] = useState(false);
+
+  useEffect(() => {
+    // Initialize SDK and notify ready before initializing wagmi
+    const initializeSdk = async () => {
+      try {
+        // Send ready notification first
+        await sdk.actions.ready();
+        console.log('Farcaster SDK ready notification sent successfully');
+        // Wait a brief moment to ensure the preview environment processes it
+        await new Promise(resolve => setTimeout(resolve, 100));
+        setIsSdkReady(true);
+      } catch (error) {
+        console.error('Error initializing SDK:', error);
+        // Still set ready to true to not block the app
+        setIsSdkReady(true);
+      }
+    };
+
+    initializeSdk();
+  }, []);
+
+  // Show loading until SDK is ready
+  if (!isSdkReady) {
+    return (
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        minHeight: '100vh',
+        backgroundColor: '#0A0F1E',
+        color: '#fff',
+        fontSize: '1.2rem'
+      }}>
+        Loading...
+      </div>
+    );
+  }
+
   return (
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
