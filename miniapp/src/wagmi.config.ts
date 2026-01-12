@@ -1,28 +1,11 @@
 import { http, createConfig } from 'wagmi';
 import { base } from 'wagmi/chains';
-import { injected, walletConnect, coinbaseWallet } from 'wagmi/connectors';
+import { farcasterMiniApp } from '@farcaster/miniapp-wagmi-connector';
 
 export const config = createConfig({
   chains: [base],
   connectors: [
-    injected({
-      target: 'metaMask', // Specify target to avoid auto-detection issues in preview
-    }),
-    walletConnect({
-      projectId: 'YOUR_WALLETCONNECT_PROJECT_ID', // Get from https://cloud.walletconnect.com
-      metadata: {
-        name: 'Agent Prediction Markets',
-        description: 'AI-Powered Predictions on Base',
-        url: 'https://agent-prediction-markets-base.vercel.app',
-        icons: ['https://agent-prediction-markets-base.vercel.app/images/icon-1024.png']
-      },
-      showQrModal: true,
-    }),
-    coinbaseWallet({
-      appName: 'Agent Prediction Markets',
-      appLogoUrl: 'https://agent-prediction-markets-base.vercel.app/images/icon-1024.png',
-      preference: 'smartWalletOnly', // Optimize for smart wallet in Base environment
-    }),
+    farcasterMiniApp(), // Farcaster Mini App connector - handles authorization properly
   ],
   ssr: false,
   transports: {

@@ -16,46 +16,21 @@ type Tab = 'markets' | 'agents' | 'create-market' | 'register-agent';
 
 function AppContent() {
   const [activeTab, setActiveTab] = useState<Tab>('markets');
-  const [isReady, setIsReady] = useState(false);
 
   // Notify Farcaster client that the mini app is ready
   useEffect(() => {
-    const initializeSdk = async () => {
+    // Call ready() after the app is fully loaded
+    const notifyReady = async () => {
       try {
-        if (sdk) {
-          // Send ready notification
-          await sdk.actions.ready();
-          console.log('Farcaster SDK ready notification sent');
-        }
+        await sdk.actions.ready();
+        console.log('Farcaster SDK ready notification sent');
       } catch (error) {
-        console.error('Error initializing SDK:', error);
-      } finally {
-        // Set ready after a short delay to ensure the preview environment processes the ready call
-        setTimeout(() => {
-          setIsReady(true);
-        }, 300);
+        console.error('Error sending ready notification:', error);
       }
     };
 
-    initializeSdk();
+    notifyReady();
   }, []);
-
-  // Don't render wallet-dependent components until SDK is ready
-  if (!isReady) {
-    return (
-      <div className="app">
-        <div className="loading-container" style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          minHeight: '100vh',
-          fontSize: '1.2rem'
-        }}>
-          Loading...
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="app">
