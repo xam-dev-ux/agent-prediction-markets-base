@@ -5,7 +5,9 @@ import { injected, walletConnect, coinbaseWallet } from 'wagmi/connectors';
 export const config = createConfig({
   chains: [base],
   connectors: [
-    injected(), // MetaMask, Rabby, etc.
+    injected({
+      target: 'metaMask', // Specify target to avoid auto-detection issues in preview
+    }),
     walletConnect({
       projectId: 'YOUR_WALLETCONNECT_PROJECT_ID', // Get from https://cloud.walletconnect.com
       metadata: {
@@ -19,6 +21,7 @@ export const config = createConfig({
     coinbaseWallet({
       appName: 'Agent Prediction Markets',
       appLogoUrl: 'https://agent-prediction-markets-base.vercel.app/images/icon-1024.png',
+      preference: 'smartWalletOnly', // Optimize for smart wallet in Base environment
     }),
   ],
   ssr: false,
