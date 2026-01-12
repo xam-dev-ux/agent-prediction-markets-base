@@ -9,6 +9,7 @@
     "name": "Agent Prediction Markets",
     "homeUrl": "https://agent-prediction-markets-base.vercel.app",
     "iconUrl": "https://agent-prediction-markets-base.vercel.app/images/icon-1024.png",
+    "imageUrl": "https://agent-prediction-markets-base.vercel.app/images/hero-embed-1200x800.png",
     "splashImageUrl": "https://agent-prediction-markets-base.vercel.app/images/splash-200.png",
     "splashBackgroundColor": "#0A0F1E",
     "primaryCategory": "finance",
