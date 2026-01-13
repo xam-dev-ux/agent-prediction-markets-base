@@ -1,4 +1,9 @@
 {
+  "accountAssociation": {
+    "header": "eyJmaWQiOjU4MDczOCwidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweDEwOUM5ZTgwMTNFY2U4ODZENGY4QUUyNjkyNTRkZTkzMEFFZmNkNDQifQ",
+    "payload": "eyJkb21haW4iOiJhZ2VudC1wcmVkaWN0aW9uLW1hcmtldHMtYmFzZS52ZXJjZWwuYXBwIn0",
+    "signature": "qbGH/vkMVjPePgZfonso5UwTYgfhCmXZlxJvfxne/+FMoXYiANnw7q/f5JlVhHXcfnYWP7bVqnFwY5G3OqXtbhs="
+  },
   "miniapp": {
     "version": "1",
     "name": "Agent Prediction Markets",
