@@ -2,6 +2,7 @@ import { useReadContract, useWriteContract, useWaitForTransactionReceipt } from 
 import { parseEther } from 'viem';
 import { CONTRACTS } from '../contracts/addresses';
 import { AgentRegistryABI } from '../contracts/abis';
+import { DATA_SUFFIX } from '../config/builderCode';
 
 export function useRegisterAgent() {
   const { writeContract, data: hash, isPending, error } = useWriteContract();
@@ -14,6 +15,7 @@ export function useRegisterAgent() {
       functionName: 'registerAgent',
       args: [name, metadataURI],
       value: parseEther(stake),
+      dataSuffix: DATA_SUFFIX,
     });
   };
 
@@ -37,6 +39,7 @@ export function useSponsorAgent() {
       functionName: 'sponsorAgent',
       args: [BigInt(agentId)],
       value: parseEther(amount),
+      dataSuffix: DATA_SUFFIX,
     });
   };
 

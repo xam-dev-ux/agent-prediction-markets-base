@@ -2,6 +2,7 @@ import { useReadContract, useWriteContract, useWaitForTransactionReceipt } from 
 import { parseEther } from 'viem';
 import { CONTRACTS } from '../contracts/addresses';
 import { MarketFactoryABI, BettingEngineABI } from '../contracts/abis';
+import { DATA_SUFFIX } from '../config/builderCode';
 
 export function useCreateMarket() {
   const { writeContract, data: hash, isPending, error } = useWriteContract();
@@ -22,6 +23,7 @@ export function useCreateMarket() {
       abi: MarketFactoryABI,
       functionName: 'createMarket',
       args: [BigInt(agentId), question, description, category, outcomes, durationSeconds],
+      dataSuffix: DATA_SUFFIX,
     });
   };
 
@@ -83,6 +85,7 @@ export function usePlaceBet() {
       functionName: 'placeBet',
       args: [BigInt(marketId), BigInt(outcomeIndex), parseEther(minPayout)],
       value: parseEther(betAmount),
+      dataSuffix: DATA_SUFFIX,
     });
   };
 
@@ -123,6 +126,7 @@ export function useClaimWinnings() {
       abi: BettingEngineABI,
       functionName: 'claimWinnings',
       args: [BigInt(marketId)],
+      dataSuffix: DATA_SUFFIX,
     });
   };
 
